@@ -414,9 +414,10 @@
         }
 
         .examples-cta {
-            font-size: 1.5rem;
+            font-size: clamp(1.6rem, 3vw, 2rem);
             color: var(--platinum);
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
         }
 
         .examples-link {
@@ -1074,19 +1075,80 @@
 
         .contact-info {
             margin-top: 2.5rem;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.85rem;
-            letter-spacing: 0.1em;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
 
         .contact-info a {
-            color: var(--platinum-muted);
+            color: var(--teal-glow);
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .contact-info a:hover {
+            color: var(--platinum);
+        }
+
+        .contact-info .contact-name {
             color: var(--teal-glow);
+            margin-top: 0.75rem;
+        }
+
+        /* ===== CONTACT BAR ===== */
+        .contact-bar {
+            background: var(--obsidian);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(8, 145, 178, 0.2);
+        }
+
+        .contact-bar-content {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem 0;
+        }
+
+        .contact-bar a {
+            color: var(--teal-glow);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            padding: 0 0.5rem;
+        }
+
+        .contact-bar a:hover {
+            color: var(--platinum);
+        }
+
+        .contact-divider {
+            color: var(--platinum-muted);
+            opacity: 0.4;
+        }
+
+        .contact-bar .contact-name {
+            color: var(--teal-glow);
+            padding: 0 0.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .contact-bar-content {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            
+            .contact-divider {
+                display: none;
+            }
         }
 
         /* ===== FOOTER ===== */
@@ -1259,7 +1321,7 @@
                     </div>
                     
                     <p class="examples-cta fade-in">
-                        Your unique lens can illuminate powerful stories of reVISION.
+                        Your unique lens can bring these powerful stories to light.
                     </p>
                     
                     <a href="https://www.revisionance.com" class="examples-link fade-in" target="_blank" rel="noopener">
@@ -1311,13 +1373,13 @@
                         <article class="await-card fade-in">
                             <div class="await-icon">✦</div>
                             <h3 class="await-title">Meaningful Impact</h3>
-                            <p class="await-desc">Your work inspires viewers worlwide to see the immense potential in the overlooked</p>
+                            <p class="await-desc">Your work inspires viewers worldwide to see the immense potential in the overlooked</p>
                         </article>
                         
                         <article class="await-card fade-in">
                             <div class="await-icon">◆</div>
                             <h3 class="await-title">Top Tier Awards</h3>
-                            <p class="await-desc">$xx,000 Cash Award + Personalized Mentorship Session</p>
+                            <p class="await-desc">$X,000 Cash Award + Personalized Mentorship</p>
                         </article>
                         
                         <article class="await-card fade-in">
@@ -1335,13 +1397,13 @@
                         <article class="await-card fade-in">
                             <div class="await-icon">✧</div>
                             <h3 class="await-title">Esteemed Recognition</h3>
-                            <p class="await-desc">Selected by award-winning filmmakers, thought leaders, visionary artists, reVISION champions</p>
+                            <p class="await-desc">Selected by award-winning filmmakers, innovation and creative visionaries, thought leaders, reVISION champions</p>
                         </article>
                         
                         <article class="await-card fade-in">
                             <div class="await-icon">⬡</div>
                             <h3 class="await-title">Creative Community</h3>
-                            <p class="await-desc">Become part of a collective of visionaries reimagining what's possible</p>
+                            <p class="await-desc">Join a collective of visionaries reimagining what's possible</p>
                         </article>
                     </div>
                 </div>
@@ -1466,15 +1528,22 @@
                     <a href="https://revisionawards.com/submit" class="cta-button fade-in" target="_blank" rel="noopener">
                         Submit
                     </a>
-                    
-                    <div class="contact-info fade-in">
-                        <p><a href="mailto:info@revisionawards.com">info@revisionawards.com</a></p>
-                        <p><a href="#faq">FAQ</a></p>
-                        <p class="contact-name">Keli Ballinger — Creative Director</p>
-                    </div>
                 </div>
             </section>
         </main>
+
+        <!-- CONTACT BAR -->
+        <div class="contact-bar">
+            <div class="contact-bar-content">
+                <a href="mailto:info@revisionawards.com">info@revisionawards.com</a>
+                <span class="contact-divider">·</span>
+                <a href="#faq">FAQ</a>
+                <span class="contact-divider">·</span>
+                <a href="https://www.revisionance.com" target="_blank" rel="noopener">Explore reVISION</a>
+                <span class="contact-divider">·</span>
+                <span class="contact-name">Keli Ballinger — Creative Director</span>
+            </div>
+        </div>
 
         <!-- FOOTER -->
         <footer>
