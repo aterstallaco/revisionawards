@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reVISION Awards | Frequently Asked Questions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts from your provided style guide -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom Color Variables based on your style context */
+        :root {
+            --obsidian: #1A1A1A; /* Primary Dark Color (Background) */
+            --teal: #008080;     /* Accent color */
+            --cream: #F5F5DC;    /* Primary Light Color (Text/Silver) */
+            --gold: #FFD700;     /* Secondary accent color */
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Montserrat', sans-serif;
+        }
+
+        body {
+            /* Text/Answers: Use the elegant Cormorant Garamond */
+            font-family: var(--font-serif); 
+            background-color: var(--obsidian);
+            color: var(--cream);
+            line-height: 1.7;
+        }
+
+        /* Styling the main headings with Montserrat (as requested by the user) */
+        .header-font {
+            font-family: var(--font-sans); 
+            font-weight: 700; /* Bolder look for headings */
+            color: var(--cream); /* Light text on dark background */
+        }
+
+        /* Accordion Custom Styling */
+        details {
+            /* Light border to separate questions against the dark background */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+            margin-bottom: 1rem;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        /* State when the accordion is open */
+        details[open] summary {
+            color: var(--teal); /* Highlight the question in Teal when open */
+            font-weight: 600;
+        }
+
+        summary {
+            font-size: 1.15rem;
+            padding: 1rem 0;
+            cursor: pointer;
+            outline: none;
+            transition: color 0.3s;
+            position: relative;
+            user-select: none;
+            list-style: none; /* Hide default arrow */
+            
+            /* Questions are also important elements, use the Serif font for consistency with body text, but let's make it a bit bolder */
+            font-family: var(--font-serif); 
+            font-weight: 500;
+        }
+        
+        /* Added hover state for questions to enhance interaction */
+        summary:hover {
+            color: var(--teal);
+        }
+
+
+        /* Custom arrow icon (plus/minus) */
+        summary::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1;
+            transition: transform 0.3s, content 0.3s;
+            color: var(--teal); /* Set plus/minus icon color to Teal */
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        .accordion-content {
+            padding: 0.5rem 0 1.5rem;
+            font-size: 1rem;
+            color: var(--cream); /* Ensure answer text is also light */
+            /* This is the body text, using Cormorant Garamond */
+            font-family: var(--font-serif); 
+        }
+
+        /* Focus states for accessibility, consistent with your original style */
+        summary:focus-visible {
+            outline: 2px solid var(--teal);
+            outline-offset: 4px;
+        }
+
+        /* Teaser line for visual separation - consistent with your uploaded style */
+        .teaser-line {
+            height: 3px;
+            /* Gradient for a stylish separation against the dark background */
+            background: linear-gradient(90deg, var(--teal), rgba(0, 128, 128, 0.2), transparent); 
+            margin: 2rem auto;
+            width: 50%;
+        }
+        
+        /* Styling for the main section headings (I., II., III.) */
+        .section-header {
+            /* Headings are Montserrat */
+            font-family: var(--font-sans);
+            color: var(--cream);
+            border-bottom: 2px solid var(--teal); /* Use Teal for a branded underline */
+        }
+        
+        /* Style for the top-right navigation link */
+        .top-nav-link {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            text-decoration: none;
+            transition: color 0.3s;
+            /* Use Teal for the link text itself */
+            color: var(--teal); 
+        }
+        
+        .top-nav-link:hover {
+            color: var(--cream); /* Invert color on hover for feedback */
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto py-8 relative">
+    
+        <a href="/" class="top-nav-link" aria-label="Go to Home Page">
+            Home <span class="font-bold text-lg">→</span>
+        </a>
+
+        <header class="text-center mb-8"> <!-- Reduced from mb-12 to mb-8 for less vertical space -->
+            <!-- Main title size adjusted for better visual balance -->
+            <h1 class="header-font text-3xl md:text-4xl font-normal mb-4">
+                Frequently Asked Questions
+            </h1>
+            <div class="teaser-line"></div>
+        </header>
+
+        <main id="faq-main">
+            <!-- I. ABOUT THE COMPETITION & MISSION -->
+            <h3 class="header-font text-3xl mb-6 mt-10 pb-2 section-header">
+                I. About the Competition & Mission
+            </h3>
+            
+            <section class="accordion-group">
+                <details>
+                    <summary>What is the theme of the reVISION Awards?</summary>
+                    <div class="accordion-content">
+                        <p>The central question behind reVISION is: "What happens when you change the way you look at things?" We are looking for films that illuminate the power of perspective. The concept is built on the profound truth that when you change the way you see things, the things you see change.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>What does "reVISION" mean in the context of the awards?</summary>
+                    <div class="accordion-content">
+                        <p>reVISION inspires us to look with curiosity and wonder. It is a path where the unwanted, discarded, or unvalued meets attention and ingenuity, revealing a world of astonishing potential in unexpected places. We celebrate how a shift in perspective can lead to brilliant creations, remarkable solutions, and extraordinary innovations.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>What kind of stories are you looking for?</summary>
+                    <div class="accordion-content">
+                        <p>We are looking for stories that reveal extraordinary potential in surprising places. This can range from discarded materials becoming art, overlooked spaces becoming vibrant communities, scientific accidents becoming discoveries, or personal setbacks becoming unexpected superpowers.</p>
+                    </div>
+                </details>
+            </section>
+
+
+            <!-- II. SUBMISSION GUIDELINES & ELIGIBILITY -->
+            <h3 class="header-font text-3xl mb-6 mt-10 pb-2 section-header">
+                II. Submission Guidelines & Eligibility
+            </h3>
+            
+            <section class="accordion-group">
+                <details>
+                    <summary>Who is eligible to enter the reVISION Awards?</summary>
+                    <div class="accordion-content">
+                        <p>The competition is open to filmmakers **worldwide** and there are **no age restrictions**.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Is there an entry fee?</summary>
+                    <div class="accordion-content">
+                        <p>No, the reVISION Awards are **free to enter** for all filmmakers.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>What are the requirements for the submitted film?</summary>
+                    <div class="accordion-content">
+                        <p>We accept short films between **3 to 10 minutes** in length.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>What genres or formats do you accept?</summary>
+                    <div class="accordion-content">
+                        <p>We accept **documentary, narrative, or experimental** formats.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Can I submit a film that has been completed and shown previously?</summary>
+                    <div class="accordion-content">
+                        <p>Yes, we accept submissions that are **original work**—whether they are new films or previously completed works.</p>
+                    </div>
+                </details>
+                
+                <details>
+                    <summary>How do I submit my film?</summary>
+                    <div class="accordion-content">
+                        <p>You will submit your film via a **link** (e.g., to YouTube, Vimeo, or a private streaming service) within our official submission form. **We do not accept file uploads**.</p>
+                    </div>
+                </details>
+            </section>
+
+            
+            <!-- III. JUDGING, DEADLINES, & AWARDS -->
+            <h3 class="header-font text-3xl mb-6 mt-10 pb-2 section-header">
+                III. Judging, Deadlines, & Awards
+            </h3>
+            
+            <section class="accordion-group">
+                <details>
+                    <summary>What is the submission deadline?</summary>
+                    <div class="accordion-content">
+                        <p>The submission deadline is **June 30, 2026**.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>When will winners be announced?</summary>
+                    <div class="accordion-content">
+                        <p>Winners will be announced on **September 1, 2026**.</p>
+                    </div>
+                </details>
+                
+                <details>
+                    <summary>How will my film be judged?</summary>
+                    <div class="accordion-content">
+                        <p>Films will be judged on **storytelling craft, cinematic quality, and emotional impact**. Bonus consideration will be given for demonstrating Exceptional Ingenuity in the filmmaking process. This includes the creative use of constraints, innovative narrative style and perspective, and resourcefully blending equipment and materials.</p>
+                    </div>
+                </details>
+                
+                <details>
+                    <summary>What do the winners receive?</summary>
+                    <div class="accordion-content">
+                        <p>The winning film receives a **$1,000 Cash Award** plus **Personalized Mentorship** with a member of the reVISION Panel.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Are finalists recognized?</summary>
+                    <div class="accordion-content">
+                        <p>Yes, finalists receive **official recognition** and their films are featured in the **curated showcase**. Featured films reach communities passionate about sustainability, innovation, possibility, and transformation.</p>
+                    </div>
+                </details>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Simple JavaScript to ensure only one answer is open at a time (Optional Enhancement)
+        const summaries = document.querySelectorAll('summary');
+        summaries.forEach(summary => {
+            summary.addEventListener('click', closeAllDetails);
+        });
+
+        function closeAllDetails(event) {
+            const currentDetail = event.target.closest('details');
+            document.querySelectorAll('details').forEach(detail => {
+                if (detail !== currentDetail) {
+                    detail.removeAttribute('open');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
