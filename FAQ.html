@@ -136,17 +136,38 @@
         .top-nav-link:hover {
             color: var(--cream); /* Invert color on hover for feedback */
         }
+        
+        /* Style for the footer section containing the contact link */
+        .footer-contact {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-contact a {
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: 600;
+            font-family: var(--font-sans);
+            transition: color 0.3s;
+        }
+        
+        .footer-contact a:hover {
+            color: var(--cream);
+        }
     </style>
 </head>
 <body class="p-4 md:p-8">
 
-    <div class="max-w-4xl mx-auto py-8 relative">
-    
+    <!-- Increased top padding (pt-16) to push the content down, giving clearance for the absolutely positioned link -->
+    <div class="max-w-4xl mx-auto pt-16 pb-8 relative">
+        <!-- Home Link Added to the Top Right with Teal Arrow -->
         <a href="/" class="top-nav-link" aria-label="Go to Home Page">
             Home <span class="font-bold text-lg">→</span>
         </a>
 
-        <header class="text-center mb-8"> <!-- Reduced from mb-12 to mb-8 for less vertical space -->
+        <header class="text-center mb-8">
             <!-- Main title size adjusted for better visual balance -->
             <h1 class="header-font text-3xl md:text-4xl font-normal mb-4">
                 Frequently Asked Questions
@@ -276,6 +297,15 @@
                 </details>
             </section>
         </main>
+        
+        <!-- Footer Contact Section -->
+        <footer class="footer-contact">
+            <p class="font-light">Still have questions?</p>
+            <p class="text-lg mt-1">
+                Reach out to us at: 
+                <a href="mailto:hello@revisionawards.com">hello@revisionawards.com</a>
+            </p>
+        </footer>
     </div>
 
     <script>
