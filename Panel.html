@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reVISION Awards | Meet the Panel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts from your provided style guide -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom Color Variables based on your style context */
+        :root {
+            --obsidian: #1A1A1A; /* Primary Dark Color (Background) */
+            --teal: #008080;     /* Accent color */
+            --cream: #F5F5DC;    /* Primary Light Color (Text/Silver) */
+            --gold: #FFD700;     /* Secondary accent color */
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Montserrat', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-serif); 
+            background-color: var(--obsidian);
+            color: var(--cream);
+            line-height: 1.7;
+        }
+
+        /* Styling the main headings with Montserrat */
+        .header-font {
+            font-family: var(--font-sans); 
+            font-weight: 700; 
+            color: var(--cream); 
+        }
+        
+        /* Style for the top-right navigation link */
+        .top-nav-link {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            text-decoration: none;
+            transition: color 0.3s;
+            color: var(--teal); 
+        }
+        
+        .top-nav-link:hover {
+            color: var(--cream); 
+        }
+
+        /* Teaser line for visual separation */
+        .teaser-line {
+            height: 3px;
+            background: linear-gradient(90deg, var(--teal), rgba(0, 128, 128, 0.2), transparent); 
+            margin: 2rem auto;
+            width: 50%;
+        }
+
+        /* Card styling for panelists */
+        .panelist-card {
+            background-color: rgba(255, 255, 255, 0.05); /* Slightly translucent white */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* Added padding-top for when scrolling to the anchor link */
+            padding-top: 2rem; 
+            margin-top: -2rem; 
+        }
+        
+        /* The actual visible card content */
+        .panelist-card > div:first-child {
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+
+        .panelist-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 128, 128, 0.3); /* Teal shadow on hover */
+        }
+        
+        .panelist-name {
+            font-family: var(--font-sans);
+            font-weight: 700;
+            color: var(--teal); /* Name in teal */
+            line-height: 1.2;
+        }
+        
+        .panelist-role {
+            font-family: var(--font-serif);
+            font-style: italic;
+            color: var(--cream);
+            opacity: 0.8;
+            margin-top: 0.25rem;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-6xl mx-auto pt-16 pb-8 relative">
+        <!-- Home Link -->
+        <a href="/" class="top-nav-link" aria-label="Go to Home Page">
+            Home <span class="font-bold text-lg">→</span>
+        </a>
+
+        <header class="text-center mb-12">
+            <!-- UPDATED: Added "Awards" and reduced font size for better fit -->
+            <h1 class="header-font text-3xl md:text-4xl font-normal mb-4">
+                Meet The reVISION Awards Panel
+            </h1>
+            <p class="font-light text-base md:text-lg max-w-2xl mx-auto mb-6">
+                Our submissions are evaluated by a diverse collective of award-winning creators, global innovation pioneers, and thought leaders who are champions of possibility and transformative perspective.
+            </p>
+            <div class="teaser-line"></div>
+        </header>
+
+        <main>
+            <!-- Panelist Grid: Responsive layout (2 columns on large screens, 1 on mobile) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                
+                <!-- Panelist 1 -->
+                <!-- ANCHOR LINK: panelist-1 -->
+                <div id="panelist-1" class="panelist-card p-6 rounded-xl">
+                    <div class="flex items-start space-x-6">
+                        <!-- Placeholder Image (Aesthetics are crucial) -->
+                        <div class="flex-shrink-0 w-24 h-24 rounded-full overflow-hidden bg-gray-700 border-2 border-teal-500">
+                            <img src="https://placehold.co/96x96/1A1A1A/008080?text=P1" alt="Placeholder image for Panelist 1" class="w-full h-full object-cover opacity-50">
+                        </div>
+                        <div>
+                            <h2 class="panelist-name text-2xl">Panelist 1 Name</h2>
+                            <p class="panelist-role text-lg">Panelist 1 Title</p>
+                            <p class="mt-3 text-sm">Place bio here.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Panelist 2 -->
+                <!-- ANCHOR LINK: panelist-2 -->
+                <div id="panelist-2" class="panelist-card p-6 rounded-xl">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0 w-24 h-24 rounded-full overflow-hidden bg-gray-700 border-2 border-teal-500">
+                            <img src="https://placehold.co/96x96/1A1A1A/008080?text=P2" alt="Placeholder image for Panelist 2" class="w-full h-full object-cover opacity-50">
+                        </div>
+                        <div>
+                            <h2 class="panelist-name text-2xl">Panelist 2 Name</h2>
+                            <p class="panelist-role text-lg">Panelist 2 Title</p>
+                            <p class="mt-3 text-sm">Place bio here.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panelist 3 -->
+                <!-- ANCHOR LINK: panelist-3 -->
+                <div id="panelist-3" class="panelist-card p-6 rounded-xl">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0 w-24 h-24 rounded-full overflow-hidden bg-gray-700 border-2 border-teal-500">
+                            <img src="https://placehold.co/96x96/1A1A1A/008080?text=P3" alt="Placeholder image for Panelist 3" class="w-full h-full object-cover opacity-50">
+                        </div>
+                        <div>
+                            <h2 class="panelist-name text-2xl">Panelist 3 Name</h2>
+                            <p class="panelist-role text-lg">Panelist 3 Title</p>
+                            <p class="mt-3 text-sm">Place bio here.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panelist 4 -->
+                <!-- ANCHOR LINK: panelist-4 -->
+                <div id="panelist-4" class="panelist-card p-6 rounded-xl">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0 w-24 h-24 rounded-full overflow-hidden bg-gray-700 border-2 border-teal-500">
+                            <img src="https://placehold.co/96x96/1A1A1A/008080?text=P4" alt="Placeholder image for Panelist 4" class="w-full h-full object-cover opacity-50">
+                        </div>
+                        <div>
+                            <h2 class="panelist-name text-2xl">Panelist 4 Name</h2>
+                            <p class="panelist-role text-lg">Panelist 4 Title</p>
+                            <p class="mt-3 text-sm">Place bio here.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Panelist 5 (NEW) -->
+                <!-- ANCHOR LINK: panelist-5 -->
+                <div id="panelist-5" class="panelist-card p-6 rounded-xl">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0 w-24 h-24 rounded-full overflow-hidden bg-gray-700 border-2 border-teal-500">
+                            <img src="https://placehold.co/96x96/1A1A1A/008080?text=P5" alt="Placeholder image for Panelist 5" class="w-full h-full object-cover opacity-50">
+                        </div>
+                        <div>
+                            <h2 class="panelist-name text-2xl">Panelist 5 Name</h2>
+                            <p class="panelist-role text-lg">Panelist 5 Title</p>
+                            <p class="mt-3 text-sm">Place bio here.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panelist 6 (NEW) -->
+                <!-- ANCHOR LINK: panelist-6 -->
+                <div id="panelist-6" class="panelist-card p-6 rounded-xl">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0 w-24 h-24 rounded-full overflow-hidden bg-gray-700 border-2 border-teal-500">
+                            <img src="https://placehold.co/96x96/1A1A1A/008080?text=P6" alt="Placeholder image for Panelist 6" class="w-full h-full object-cover opacity-50">
+                        </div>
+                        <div>
+                            <h2 class="panelist-name text-2xl">Panelist 6 Name</h2>
+                            <p class="panelist-role text-lg">Panelist 6 Title</p>
+                            <p class="mt-3 text-sm">Place bio here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <footer class="text-center mt-12 pt-8 border-t border-gray-800">
+                <p class="text-sm opacity-70 font-sans">
+                    *Panelists are subject to change. Final list and biographies will be published before the official submission deadline.
+                </p>
+            </footer>
+
+        </main>
+    </div>
+</body>
+</html>
