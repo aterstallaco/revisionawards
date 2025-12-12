@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Successful! | The reVISION Awards</title>
+    <meta name="description" content="Your film submission to The reVISION Awards has been successfully received.">
+    <link rel="icon" type="image/png" href="/favicon.jpg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom Color Variables copied from your panel page */
+        :root {
+            --obsidian: #1A1A1A; /* Primary Dark Color (Background) */
+            --teal: #008080;      /* Accent color */
+            --cream: #F5F5DC;     /* Primary Light Color (Text/Silver) */
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Montserrat', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-serif); 
+            background-color: var(--obsidian);
+            color: var(--cream);
+            line-height: 1.7;
+            /* Ensures content is centered vertically and horizontally for a success page */
+            min-height: 100vh; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .header-font {
+            font-family: var(--font-sans); 
+            font-weight: 700; 
+            color: var(--teal); /* Changing header to TEAL for a celebratory feel */
+        }
+        
+        .teaser-line {
+            height: 3px;
+            background: linear-gradient(90deg, var(--teal), rgba(0, 128, 128, 0.2), transparent); 
+            margin: 2rem auto;
+            width: 50%;
+        }
+
+        /* Style for the button */
+        .submit-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            margin-top: 2rem;
+            background-color: var(--teal);
+            color: var(--obsidian);
+            font-family: var(--font-sans);
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none; /* Make it look like a button */
+        }
+
+        .submit-button:hover {
+            background-color: #00A3A3; /* Slightly lighter teal */
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-xl mx-auto py-16 px-4">
+        
+        <header class="mb-8">
+            <h1 class="header-font text-5xl md:text-6xl mb-4">
+                Thank You
+            </h1>
+            
+            <div class="teaser-line"></div>
+            
+            <p class="font-light text-xl md:text-2xl max-w-xl mx-auto mt-8">
+                Your submission has been successfully sent to The reVISION Awards team.
+            </p>
+
+            <p class="font-sans text-base opacity-90 mt-4">
+                **Yes, you will receive an email confirmation shortly** detailing the next steps and confirming the data we received. Please also check the **spam folder** if it does not arrive within an hour.
+            </p>
+        </header>
+
+        <main>
+            <a href="/" class="submit-button">
+                Return to Home Page
+            </a>
+        </main>
+    </div>
+</body>
+</html>
