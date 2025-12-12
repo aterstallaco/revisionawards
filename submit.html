@@ -169,7 +169,9 @@
 
         <main>
            <form id="submission-form" name="film-submission" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html" class="space-y-6">
-
+<input type="hidden" name="form-name" value="film-submission" />
+<input type="hidden" name="bot-field" />
+              
                 <!-- Film Title -->
                 <div>
                     <label for="filmTitle" class="block mb-2 font-medium">Film Title <span class="text-red-500">*</span></label>
@@ -272,63 +274,6 @@
         </main>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const form = document.getElementById('submission-form');
-            const submitBtn = document.getElementById('submit-btn');
-            const loadingText = document.getElementById('loading-text');
-            const appContainer = document.getElementById('app-container');
-
-            // Hide/Show message box function
-            function showMessage(message, isError = false) {
-                const box = document.createElement('div');
-                box.className = 'message-box';
-                box.innerHTML = `
-                    <h3 class="text-xl font-bold mb-3">${isError ? 'Submission Failed' : 'Submission Successful'}</h3>
-                    <p>${message}</p>
-                    <button onclick="this.parentNode.remove()">Close</button>
-                `;
-                document.body.appendChild(box);
-            }
-
-            form.addEventListener('submit', async function(e) {
-                e.preventDefault();
-                
-                submitBtn.disabled = true;
-                loadingText.classList.remove('hidden');
-
-                const data = new FormData(form);
-                
-                try {
-                    const response = await fetch(e.target.action, {
-                        method: form.method,
-                        body: data,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    });
-
-                    if (response.ok) {
-                        showMessage("Thank you for submitting to the reVISION Awards! You will receive a confirmation email shortly.");
-                        form.reset();
-                    } else {
-                        const responseData = await response.json();
-                        if (Object.hasOwnProperty.call(responseData, 'errors')) {
-                            // Formspree returns an object with errors for validation issues
-                            showMessage('There was an issue with your submission: ' + responseData.errors.map(err => err.field + ': ' + err.message).join('; '), true);
-                        } else {
-                            showMessage("Could not submit the form. Please check your network connection and try again.", true);
-                        }
-                    }
-                } catch (error) {
-                    console.error('Submission error:', error);
-                    showMessage("A network error occurred. Please try again.", true);
-                } finally {
-                    submitBtn.disabled = false;
-                    loadingText.classList.add('hidden');
-                }
-            });
-        });
-    </script>
+  
 </body>
 </html>
